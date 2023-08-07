@@ -1,5 +1,5 @@
 {% set name = "openff-fragmenter" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}-split
@@ -20,13 +20,13 @@ outputs:
 
     requirements:
       host:
-        - python >=3.8
+        - python >=3.9
         - pip
       run:
-        - python >=3.8
+        - python >=3.9
         - openff-toolkit-base >=0.11.0
         - numpy
-        - pydantic <2.0.0a0
+        - pydantic <3.0.0a0
         - networkx
         - jinja2
         - typing-extensions
@@ -41,9 +41,9 @@ outputs:
 
     requirements:
       host:
-        - python >=3.8
+        - python >=3.9
       run:
-        - python >=3.8
+        - python >=3.9
         - rdkit
         - ambertools
         - {{ pin_subpackage('openff-fragmenter-base', exact=True) }}
