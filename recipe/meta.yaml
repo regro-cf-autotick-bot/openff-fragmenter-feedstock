@@ -32,6 +32,8 @@ outputs:
         - typing-extensions
 
     test:
+      requires:
+        - python =3.10
       imports:
         - openff.fragmenter
 
@@ -49,6 +51,8 @@ outputs:
         - {{ pin_subpackage('openff-fragmenter-base', exact=True) }}
 
     test:
+      requires:
+        - python =3.10
       imports:
         - openff.fragmenter
 
