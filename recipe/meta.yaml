@@ -22,10 +22,9 @@ outputs:
       host:
         - python >=3.9
         - pip
-        - rdkit
       run:
         - python >=3.9
-        - openff-toolkit-base >=0.11.0
+        - openff-toolkit-base >=0.14.3
         - numpy
         - pydantic <3.0.0a0
         - networkx
@@ -35,7 +34,7 @@ outputs:
     test:
       imports:
         - openff.fragmenter
-        
+
   - name: {{ name|lower }}
     build:
       noarch: python
@@ -48,7 +47,7 @@ outputs:
         - rdkit
         - ambertools
         - {{ pin_subpackage('openff-fragmenter-base', exact=True) }}
-    
+
     test:
       imports:
         - openff.fragmenter
