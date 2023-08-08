@@ -1,11 +1,11 @@
-About openff-fragmenter-split
-=============================
+About openff-fragmenter-split-feedstock
+=======================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openff-fragmenter-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/openforcefield/openff-fragmenter
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openff-fragmenter-feedstock/blob/main/LICENSE.txt)
 
 Summary: Fragment molecules for quantum mechanics torsion scans.
 

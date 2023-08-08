@@ -1,5 +1,5 @@
 {% set name = "openff-fragmenter" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openforcefield/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: c6e6625ee9b9c5efcc08bcbd4058be6fb381b59ac80602bf60f8f855c5a269b0
+  sha256: 33bb85f965dd22f9023fb76dd6518527e61f25b35b7b7560a0d88d52594989e5
 
 build:
   number: 0
@@ -20,13 +20,13 @@ outputs:
 
     requirements:
       host:
-        - python >=3.8
+        - python >=3.9
         - pip
       run:
-        - python >=3.8
-        - openff-toolkit-base >=0.11.0
+        - python >=3.9
+        - openff-toolkit-base >=0.14.3
         - numpy
-        - pydantic <2.0.0a0
+        - pydantic <3.0.0a0
         - networkx
         - jinja2
         - typing-extensions
@@ -41,9 +41,9 @@ outputs:
 
     requirements:
       host:
-        - python >=3.8
+        - python >=3.9
       run:
-        - python >=3.8
+        - python >=3.9
         - rdkit
         - ambertools
         - {{ pin_subpackage('openff-fragmenter-base', exact=True) }}
