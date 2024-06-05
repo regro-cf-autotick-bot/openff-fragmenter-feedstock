@@ -1,5 +1,5 @@
 {% set name = "openff-fragmenter" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openforcefield/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 33bb85f965dd22f9023fb76dd6518527e61f25b35b7b7560a0d88d52594989e5
+  sha256: dd83c608358c51459edade482d5f664f7bf7112c61356b0b108e19730df97a2a
 
 build:
   number: 0
