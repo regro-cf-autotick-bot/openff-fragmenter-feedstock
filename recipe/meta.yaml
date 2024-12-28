@@ -10,7 +10,7 @@ source:
   sha256: dd83c608358c51459edade482d5f664f7bf7112c61356b0b108e19730df97a2a
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: {{ name|lower }}-base
@@ -20,10 +20,10 @@ outputs:
 
     requirements:
       host:
-        - python >=3.9
+        - python {{ python_min }}
         - pip
       run:
-        - python >=3.9
+        - python >={{ python_min }}
         - openff-toolkit-base >=0.14.3
         - numpy
         - pydantic <3.0.0a0
@@ -32,6 +32,8 @@ outputs:
         - typing-extensions
 
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - openff.fragmenter
 
@@ -41,14 +43,16 @@ outputs:
 
     requirements:
       host:
-        - python >=3.9
+        - python {{ python_min }}
       run:
-        - python >=3.9
+        - python >={{ python_min }}
         - rdkit
         - ambertools
         - {{ pin_subpackage('openff-fragmenter-base', exact=True) }}
 
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - openff.fragmenter
 
