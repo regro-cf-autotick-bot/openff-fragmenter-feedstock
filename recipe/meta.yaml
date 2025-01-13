@@ -36,6 +36,10 @@ outputs:
         - python {{ python_min }}
       imports:
         - openff.fragmenter
+      files:
+        - test_fragmenter.py
+      commands:
+        - python test_fragmenter.py
 
   - name: {{ name|lower }}
     build:
